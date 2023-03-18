@@ -1,5 +1,5 @@
 # counter-with-vuex
-
+https://github.com/Malshua/counter-with-vuex
 ## Project setup
 ```
 npm install
