@@ -12,10 +12,10 @@ export default createStore({
   },
   mutations: {
     increaseCounter(state, randomNumber) {
-      state.counter += randomNumber;
+      state.counter++;
     },
     decreaseCounter(state, randomNumber) {
-      state.counter -= randomNumber;
+      state.counter--;
     },
     reset(state) {
       state.counter = 0;
@@ -26,18 +26,20 @@ export default createStore({
   },
   actions: {
     increaseCounter({ commit }) {
-      axios(
-        "https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new"
-      ).then((response) => {
-        commit("increaseCounter", response.data);
-      });
+      // axios(
+      //   "https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new"
+      // ).then((response) => {
+      //   commit("increaseCounter", response.data);
+      // });
+      commit("increaseCounter");
     },
     decreaseCounter({ commit }) {
-      axios(
-        "https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new"
-      ).then((response) => {
-        commit("decreaseCounter", response.data);
-      });
+      // axios(
+      //   "https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new"
+      // ).then((response) => {
+      //   commit("decreaseCounter", response.data);
+      // });
+      commit("decreaseCounter");
     },
     updateValue({ commit }, newValue) {
       commit("updateValue", newValue);
